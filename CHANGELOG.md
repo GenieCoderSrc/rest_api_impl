@@ -3,6 +3,9 @@
 All notable changes to this project will be documented in this file.
 
 
+## 0.0.4
+- Update export file.
+
 ## 0.0.3
 - Created Register Local Data Source Service GetIt DI.
 - Created Register RestApi Data Source Service GetIt DI.

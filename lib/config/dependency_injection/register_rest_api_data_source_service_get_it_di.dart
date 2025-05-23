@@ -19,7 +19,7 @@ void registerRestApiDataSourceServiceGetItDI() {
 
   sl.registerLazySingleton(() => http.Client());
 
-  registerLocalHiveDataSourceServiceGetItDI();
+  
 
   /// ----------------- Rest API Data Service--------------
   ///  Service

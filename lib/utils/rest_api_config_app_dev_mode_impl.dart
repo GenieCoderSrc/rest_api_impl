@@ -1,13 +1,24 @@
 import 'package:rest_api_impl/utils/i_utils/i_rest_api_config.dart';
 
 class RestApiConfigAppDevModeImpl extends IRestApiConfig {
-  static const String BASE_URL =
-      "https://hubstafferapi20210211223323.azurewebsites.net";
-  static const String API_KEY = '';
+  String? _baseUrl;
+  String? _apiKey;
+
+  RestApiConfigAppDevModeImpl({
+    String? baseUrl,
+    String? apiKey,
+  })  : _baseUrl = baseUrl,
+        _apiKey = apiKey;
 
   @override
-  String get apiKey => API_KEY;
+  String get apiKey => _apiKey ?? '';
 
   @override
-  String get baseUrl => BASE_URL;
+  set apiKey(String key) => _apiKey = key;
+
+  @override
+  String get baseUrl => _baseUrl ?? '';
+
+  @override
+  set baseUrl(String url) => _baseUrl = url;
 }

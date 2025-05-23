@@ -1,9 +1,6 @@
 library rest_api_impl;
 
-export 'package:rest_api_impl/config/dependency_injection/register_local_data_source_service_get_it_di.dart';
 export 'package:rest_api_impl/config/dependency_injection/register_rest_api_data_source_service_get_it_di.dart';
-export 'package:rest_api_impl/config/di/rest_api_service_get_it_register.dart';
-export 'package:rest_api_impl/constants/rest_api_constants.dart';
 export 'package:rest_api_impl/data/data_sources/http_patch_method.dart';
 export 'package:rest_api_impl/data/data_sources/http_post_methods.dart';
 export 'package:rest_api_impl/data/data_sources/http_put_methods.dart';

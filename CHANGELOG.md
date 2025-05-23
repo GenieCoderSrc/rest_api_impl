@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 
 
+## 0.0.3
+- Created Register Local Data Source Service GetIt DI.
+- Created Register RestApi Data Source Service GetIt DI.
+
 ## 0.0.2
 ### Added
 - Dependency injection-based service registration

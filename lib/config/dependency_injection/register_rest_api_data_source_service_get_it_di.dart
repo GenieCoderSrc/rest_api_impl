@@ -1,5 +1,4 @@
 import 'package:get_it_di_global_variable/get_it_di.dart';
-import 'package:register/dependency_injection/register_local_hive_data_source_service_get_it_di.dart';
 import 'package:rest_api_impl/data/data_sources/i_data_sources/i_rest_api_crud_service.dart';
 import 'package:rest_api_impl/data/data_sources/i_data_sources/i_rest_api_data_sender.dart';
 import 'package:rest_api_impl/data/data_sources/rest_api_crud_service_rest_api_data_sender_impl.dart';

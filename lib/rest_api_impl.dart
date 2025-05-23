@@ -15,11 +15,8 @@ export 'package:rest_api_impl/data/data_sources/i_data_sources/i_image_service_r
 export 'package:rest_api_impl/data/data_sources/i_data_sources/i_rest_api_crud_service.dart';
 export 'package:rest_api_impl/data/data_sources/i_data_sources/i_rest_api_data_sender.dart';
 export 'package:rest_api_impl/domain/entity/boolean_response_entity.dart';
-export 'package:rest_api_impl/domain/entity/boolean_response_entity.g.dart';
 export 'package:rest_api_impl/domain/entity/map_response_entity.dart';
-export 'package:rest_api_impl/domain/entity/map_response_entity.g.dart';
 export 'package:rest_api_impl/domain/entity/response_entity.dart';
-export 'package:rest_api_impl/domain/entity/response_entity.g.dart';
 export 'package:rest_api_impl/exceptions/exception_handler/rest_api_exception_handler.dart';
 export 'package:rest_api_impl/exceptions/exceptions_impl/common_exceptions_impl.dart';
 export 'package:rest_api_impl/extenstions/http_response_extensions.dart';

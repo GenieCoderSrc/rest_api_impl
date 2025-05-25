@@ -1,4 +1,3 @@
-import 'package:rest_api_impl/config/di/rest_api_service_get_it_register.dart';
 import 'package:rest_api_impl/data/data_sources/i_data_sources/i_image_service_rest_api_data_source.dart';
 import 'package:rest_api_impl/rest_api_impl.dart';
 import 'package:get_it/get_it.dart';
@@ -7,9 +6,6 @@ import 'dart:io';
 final sl = GetIt.instance;
 
 void main() async {
-  // Register services
-  restApiServiceGetItRegister();
-
   final restApiService = sl<IRestApiCrudService>();
   final imageService = sl<IImageServiceRestApiDataSource>();
 

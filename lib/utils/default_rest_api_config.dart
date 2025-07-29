@@ -1,10 +1,10 @@
 import 'package:rest_api_impl/utils/i_utils/i_rest_api_config.dart';
 
-class RestApiConfigAppDevModeImpl extends IRestApiConfig {
+class DefaultRestApiConfig extends IRestApiConfig {
   String? _baseUrl;
   String? _apiKey;
 
-  RestApiConfigAppDevModeImpl({
+  DefaultRestApiConfig({
     String? baseUrl,
     String? apiKey,
   })  : _baseUrl = baseUrl,

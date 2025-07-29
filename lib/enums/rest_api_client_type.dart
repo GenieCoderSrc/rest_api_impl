@@ -1,0 +1,4 @@
+enum RestApiClientType {
+  dio,
+  http,
+}

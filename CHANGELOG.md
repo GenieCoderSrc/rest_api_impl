@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.6
+### Jul 29, 2025
+
+### Added
+- Support for selecting API client type using `RestApiClientType` enum (`dio`, `http`).
+- Introduced `IRestApiConfig` interface and `DefaultRestApiConfig` implementation with configurable base URL and API key.
+- Updated repository and service DI registration to respect selected client type (Dio or Http).
+- Ensured `Method` enum is exhaustively handled using the `switch` statement.
 
 ## 0.0.5
 - Update example file.

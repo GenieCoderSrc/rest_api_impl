@@ -1,8 +1,8 @@
-import 'dart:io';
+import 'package:cross_file/cross_file.dart';
 
 abstract class IImageServiceRestApiDataSource {
   Future<String?> uploadFile({
-    required File file,
+    required XFile file,
     required String endPoint,
     Map<String, dynamic>? queryParams,
     String? fileName,

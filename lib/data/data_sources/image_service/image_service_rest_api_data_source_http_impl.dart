@@ -1,5 +1,4 @@
-import 'dart:io';
-
+import 'package:cross_file/cross_file.dart';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:rest_api_impl/exceptions/exception_handler/rest_api_exception_handler.dart';
@@ -9,7 +8,7 @@ import 'package:rest_api_impl/utils/i_utils/i_response_handler.dart';
 import 'package:rest_api_impl/utils/i_utils/i_rest_api_config.dart';
 import 'package:rest_api_impl/utils/i_utils/i_url_generator.dart';
 
-import 'i_data_sources/i_image_service_rest_api_data_source.dart';
+import 'i_image_service/i_image_service_rest_api_data_source.dart';
 
 class ImageServiceRestApiDataSourceHttpImpl
     extends IImageServiceRestApiDataSource {
@@ -53,7 +52,7 @@ class ImageServiceRestApiDataSourceHttpImpl
 
   @override
   Future<String?> uploadFile({
-    required File file,
+    required XFile file,
     required String endPoint,
     Map<String, dynamic>? queryParams,
     String? fileName,
@@ -77,6 +76,7 @@ class ImageServiceRestApiDataSourceHttpImpl
       // Attach the image file to the request
       final http.ByteStream fileStream = http.ByteStream(file.openRead());
       final int length = await file.length();
+
       final http.MultipartFile multipartFile = http.MultipartFile(
           imgFieldName, fileStream, length,
           filename: fileName ?? file.path);

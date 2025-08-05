@@ -3,10 +3,11 @@ import 'package:rest_api_impl/utils/i_utils/i_url_generator.dart';
 
 class UrlGeneratorRestApiImpl extends IUrlGenerator {
   @override
-  Uri generatePathUrl(
-      {required String endPoint,
-      Map<String, dynamic>? keyParams,
-      required IRestApiConfig config}) {
+  Uri generatePathUrl({
+    required String endPoint,
+    Map<String, dynamic>? keyParams,
+    required IRestApiConfig config,
+  }) {
     // if there have a api key,
     String paramsString = '';
     if (keyParams?.isNotEmpty ?? false) {
@@ -15,7 +16,8 @@ class UrlGeneratorRestApiImpl extends IUrlGenerator {
       });
 
       return Uri.parse(
-          '${config.baseUrl}/$endPoint?api_key=${config.apiKey}$paramsString');
+        '${config.baseUrl}/$endPoint?api_key=${config.apiKey}$paramsString',
+      );
     }
 
     return Uri.parse('${config.baseUrl}/$endPoint');

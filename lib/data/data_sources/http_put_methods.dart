@@ -18,8 +18,11 @@ class HttpPutMethod implements IHttpMethod {
     Map<String, dynamic>? data,
   ) async {
     try {
-      final response =
-          await client.put(url, headers: headers, body: jsonEncode(data));
+      final response = await client.put(
+        url,
+        headers: headers,
+        body: jsonEncode(data),
+      );
       return jsonDecode(response.body);
     } catch (e) {
       debugPrint('HttpPostMethod | execute| error: $e');

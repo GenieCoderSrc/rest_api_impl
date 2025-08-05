@@ -17,8 +17,11 @@ class HttpPatchMethod implements IHttpMethod {
     Map<String, dynamic>? data,
   ) async {
     try {
-      final response =
-          await client.patch(url, headers: headers, body: jsonEncode(data));
+      final response = await client.patch(
+        url,
+        headers: headers,
+        body: jsonEncode(data),
+      );
       return jsonDecode(response.body);
     } catch (e) {
       debugPrint('HttpPostMethod | execute| error: $e');

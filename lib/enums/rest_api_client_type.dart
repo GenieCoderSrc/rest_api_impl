@@ -1,4 +1,1 @@
-enum RestApiClientType {
-  dio,
-  http,
-}
+enum RestApiClientType { dio, http }

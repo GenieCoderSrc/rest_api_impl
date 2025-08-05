@@ -18,21 +18,18 @@ class ResponseModel<T> extends ResponseEntity<T> {
   final int? statusCode;
   @override
   @JsonKey(
-      fromJson: HttpResponseDataParser.dataFromJson,
-      toJson: HttpResponseDataParser.dataToJson)
+    fromJson: HttpResponseDataParser.dataFromJson,
+    toJson: HttpResponseDataParser.dataToJson,
+  )
   final T? data;
 
-  ResponseModel({
-    this.message,
-    this.status,
-    this.statusCode,
-    this.data,
-  }) : super(
-          message: message,
-          status: status,
-          statusCode: statusCode,
-          data: data,
-        );
+  ResponseModel({this.message, this.status, this.statusCode, this.data})
+    : super(
+        message: message,
+        status: status,
+        statusCode: statusCode,
+        data: data,
+      );
 
   factory ResponseModel.fromJson(Map<String, dynamic> json) =>
       _$ResponseModelFromJson(json);

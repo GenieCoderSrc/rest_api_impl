@@ -27,21 +27,25 @@ class RestApiDataSenderHttpImpl extends IRestApiDataSender {
   });
 
   @override
-  Future<Map<String, dynamic>?> sendRequest(
-      {required String endPoint,
-      required Method method,
-      String? accessToken,
-      Map<String, dynamic>? data}) async {
+  Future<Map<String, dynamic>?> sendRequest({
+    required String endPoint,
+    required Method method,
+    String? accessToken,
+    Map<String, dynamic>? data,
+  }) async {
     try {
       // get url
       Uri url = iApiPathUrlGenerator.generatePathUrl(
-          endPoint: endPoint, config: iRestApiConfig);
+        endPoint: endPoint,
+        config: iRestApiConfig,
+      );
 
       final Request request = Request(method.name, url);
 
       // get headers
-      Map<String, String> headers =
-          iRestApiHeaderProvider.getHeaders(accessToken);
+      Map<String, String> headers = iRestApiHeaderProvider.getHeaders(
+        accessToken,
+      );
       request.headers.addAll(headers);
 
       // encrypt data
@@ -54,7 +58,8 @@ class RestApiDataSenderHttpImpl extends IRestApiDataSender {
       final Response response = await Response.fromStream(streamedResponse);
 
       debugPrint(
-          'RestApiDataSenderHttpImpl | request | response body: ${response.body.toString()}');
+        'RestApiDataSenderHttpImpl | request | response body: ${response.body.toString()}',
+      );
 
       // handle Response data &  exceptions
       return iResponseHandler.handleResponse(response);

@@ -25,27 +25,34 @@ class ImageServiceRestApiDataSourceHttpImpl
   });
 
   @override
-  Future<bool> deleteFile(
-      {required String endPoint, String? accessToken}) async {
+  Future<bool> deleteFile({
+    required String endPoint,
+    String? accessToken,
+  }) async {
     try {
       // get url
       Uri uri = iApiPathUrlGenerator.generatePathUrl(
-          endPoint: endPoint, config: iRestApiConfig);
+        endPoint: endPoint,
+        config: iRestApiConfig,
+      );
 
       // get headers
-      Map<String, String> headers =
-          iRestApiHeaderProvider.getHeaders(accessToken);
+      Map<String, String> headers = iRestApiHeaderProvider.getHeaders(
+        accessToken,
+      );
 
       final http.Response response = await http.delete(uri, headers: headers);
 
       debugPrint(
-          'ImageServiceRestApiDataSourceHttpImpl | deleteFile | response body: ${response.body.toString()}');
+        'ImageServiceRestApiDataSourceHttpImpl | deleteFile | response body: ${response.body.toString()}',
+      );
 
       // handle Response data &  exceptions
       return response.handleResponse<bool>(onSuccess: () => true);
     } catch (e) {
       debugPrint(
-          'ImageServiceRestApiDataSourceHttpImpl | deleteFile | error: $e');
+        'ImageServiceRestApiDataSourceHttpImpl | deleteFile | error: $e',
+      );
       throw RestApiExceptionHandler.handleException(e);
     }
   }
@@ -63,14 +70,17 @@ class ImageServiceRestApiDataSourceHttpImpl
     try {
       // get url
       Uri uri = iApiPathUrlGenerator.generatePathUrl(
-          endPoint: endPoint, config: iRestApiConfig);
+        endPoint: endPoint,
+        config: iRestApiConfig,
+      );
 
       // Create a multipart request
       final http.MultipartRequest request = http.MultipartRequest('POST', uri);
 
       // get headers
-      Map<String, String> headers =
-          iRestApiHeaderProvider.getHeaders(accessToken);
+      Map<String, String> headers = iRestApiHeaderProvider.getHeaders(
+        accessToken,
+      );
       request.headers.addAll(headers);
 
       // Attach the image file to the request
@@ -78,8 +88,11 @@ class ImageServiceRestApiDataSourceHttpImpl
       final int length = await file.length();
 
       final http.MultipartFile multipartFile = http.MultipartFile(
-          imgFieldName, fileStream, length,
-          filename: fileName ?? file.path);
+        imgFieldName,
+        fileStream,
+        length,
+        filename: fileName ?? file.path,
+      );
       request.files.add(multipartFile);
 
       // Add query parameters if provided
@@ -91,15 +104,17 @@ class ImageServiceRestApiDataSourceHttpImpl
 
       // Send the request
       final http.StreamedResponse streamedResponse = await request.send();
-      final http.Response response =
-          await http.Response.fromStream(streamedResponse);
+      final http.Response response = await http.Response.fromStream(
+        streamedResponse,
+      );
 
       // handle Response data &  exceptions
       return iResponseHandler.handleResponse(response)?['data'][urlFieldName]
           as String;
     } catch (e) {
       debugPrint(
-          'ImageServiceRestApiDataSourceHttpImpl | uploadFile | error: $e');
+        'ImageServiceRestApiDataSourceHttpImpl | uploadFile | error: $e',
+      );
       throw RestApiExceptionHandler.handleException(e);
     }
   }

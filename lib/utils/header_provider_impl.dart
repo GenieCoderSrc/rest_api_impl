@@ -5,7 +5,7 @@ class HeaderProviderBearerImpl extends IHeaderProvider {
   Map<String, String> getHeaders(String? accessToken) {
     return <String, String>{
       'Content-Type': 'application/json',
-      if (accessToken != null) 'Authorization': 'Bearer $accessToken'
+      if (accessToken != null) 'Authorization': 'Bearer $accessToken',
     };
   }
 }

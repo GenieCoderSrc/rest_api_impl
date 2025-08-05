@@ -13,8 +13,9 @@ class ResponseEntity<T> {
   @JsonKey(defaultValue: 0)
   final int? statusCode;
   @JsonKey(
-      fromJson: HttpResponseDataParser.dataFromJson,
-      toJson: HttpResponseDataParser.dataToJson)
+    fromJson: HttpResponseDataParser.dataFromJson,
+    toJson: HttpResponseDataParser.dataToJson,
+  )
   final T? data;
   ResponseEntity({this.status, this.message, this.statusCode, this.data});
 

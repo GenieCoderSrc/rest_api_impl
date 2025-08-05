@@ -1,7 +1,1 @@
-enum Method {
-  POST,
-  GET,
-  PUT,
-  DELETE,
-  PATCH,
-}
+enum Method { POST, GET, PUT, DELETE, PATCH }

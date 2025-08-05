@@ -13,17 +13,20 @@ class ResponseHandlerHttpImpl extends IResponseHandler<http.Response> {
     try {
       if (response is http.Response) {
         debugPrint(
-            'HttpResponseHandlerService | handleResponse | response.body: ${response.body.toString()}');
+          'HttpResponseHandlerService | handleResponse | response.body: ${response.body.toString()}',
+        );
 
         // handle status code
         return response.handleResponse<Map<String, dynamic>>(
-            onSuccess: () => jsonDecode(response.body) as Map<String, dynamic>);
+          onSuccess: () => jsonDecode(response.body) as Map<String, dynamic>,
+        );
       }
       // Invalid response type
       throw InvalidResponseDataException();
     } catch (e) {
       debugPrint(
-          'HttpResponseHandlerService | handleResponse| Catch | error: $e');
+        'HttpResponseHandlerService | handleResponse| Catch | error: $e',
+      );
       throw RestApiExceptionHandler.handleException(e);
     }
   }

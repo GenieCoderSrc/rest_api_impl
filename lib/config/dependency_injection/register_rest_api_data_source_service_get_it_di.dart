@@ -32,12 +32,8 @@ void registerRestApiDataSourceServiceGetItDI({
     () => config ?? DefaultRestApiConfig(baseUrl: baseUrl, apiKey: apiKey),
   );
 
-  sl.registerLazySingleton<IHeaderProvider>(
-    () => HeaderProviderBearerImpl(),
-  );
-  sl.registerLazySingleton<IUrlGenerator>(
-    () => UrlGeneratorRestApiImpl(),
-  );
+  sl.registerLazySingleton<IHeaderProvider>(() => HeaderProviderBearerImpl());
+  sl.registerLazySingleton<IUrlGenerator>(() => UrlGeneratorRestApiImpl());
 
   // ───────────────────────────────────────────────
   // 🔁 Conditional Implementation: HTTP or DIO

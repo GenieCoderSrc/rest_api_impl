@@ -36,8 +36,9 @@ class RestApiDataSenderDioImpl extends IRestApiDataSender {
           .generatePathUrl(endPoint: endPoint, config: iRestApiConfig)
           .toString();
 
-      final Map<String, String> headers =
-          iRestApiHeaderProvider.getHeaders(accessToken);
+      final Map<String, String> headers = iRestApiHeaderProvider.getHeaders(
+        accessToken,
+      );
 
       late Response response;
 
@@ -79,7 +80,9 @@ class RestApiDataSenderDioImpl extends IRestApiDataSender {
           break;
       }
 
-      log('RestApiDataSenderDioImpl | response body: ${response.data.toString()}');
+      log(
+        'RestApiDataSenderDioImpl | response body: ${response.data.toString()}',
+      );
 
       return iResponseHandler.handleResponse(response);
     } catch (e) {

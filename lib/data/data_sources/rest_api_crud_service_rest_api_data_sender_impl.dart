@@ -11,10 +11,11 @@ class RestApiCrudServiceRestApiDataSenderImpl extends IRestApiCrudService {
   RestApiCrudServiceRestApiDataSenderImpl({required this.iRestApiDataSender});
 
   @override
-  Future<Map<String, dynamic>?> addData(
-      {required Map<String, dynamic> data,
-      String? accessToken,
-      required String endPoint}) async {
+  Future<Map<String, dynamic>?> addData({
+    required Map<String, dynamic> data,
+    String? accessToken,
+    required String endPoint,
+  }) async {
     try {
       // Map<String, dynamic>? json = await iRestApiDataSender.sendRequest(
       return await iRestApiDataSender.sendRequest(
@@ -25,16 +26,18 @@ class RestApiCrudServiceRestApiDataSenderImpl extends IRestApiCrudService {
       );
     } catch (e) {
       debugPrint(
-          'RestApiCrudServiceRestApiDataSenderImpl | addData | error: $e');
+        'RestApiCrudServiceRestApiDataSenderImpl | addData | error: $e',
+      );
       rethrow;
     }
   }
 
   @override
-  Future<Map<String, dynamic>?> updateData(
-      {required Map<String, dynamic> data,
-      String? accessToken,
-      required String endPoint}) async {
+  Future<Map<String, dynamic>?> updateData({
+    required Map<String, dynamic> data,
+    String? accessToken,
+    required String endPoint,
+  }) async {
     try {
       return await iRestApiDataSender.sendRequest(
         data: data,
@@ -51,7 +54,8 @@ class RestApiCrudServiceRestApiDataSenderImpl extends IRestApiCrudService {
       // return json != null ? ResponseModel.fromJson(json) : null;
     } catch (e) {
       debugPrint(
-          'RestApiCrudServiceRestApiDataSenderImpl | updateData | error: $e');
+        'RestApiCrudServiceRestApiDataSenderImpl | updateData | error: $e',
+      );
       rethrow;
     }
   }
@@ -78,16 +82,18 @@ class RestApiCrudServiceRestApiDataSenderImpl extends IRestApiCrudService {
       // return json != null ? ResponseModel.fromJson(json) : null;
     } catch (e) {
       debugPrint(
-          'RestApiCrudServiceRestApiDataSenderImpl | deleteData | error: $e');
+        'RestApiCrudServiceRestApiDataSenderImpl | deleteData | error: $e',
+      );
       rethrow;
     }
   }
 
   @override
-  Future<List<Map<String, dynamic>>?> getAllDataList(
-      {String? accessToken,
-      required String endPoint,
-      Map<String, dynamic>? data}) async {
+  Future<List<Map<String, dynamic>>?> getAllDataList({
+    String? accessToken,
+    required String endPoint,
+    Map<String, dynamic>? data,
+  }) async {
     try {
       Map<String, dynamic>? json = await iRestApiDataSender.sendRequest(
         data: data,
@@ -97,7 +103,8 @@ class RestApiCrudServiceRestApiDataSenderImpl extends IRestApiCrudService {
       );
 
       debugPrint(
-          'RestApiCrudServiceRestApiDataSenderImpl | getAllDataList | json: ${json.toString()}');
+        'RestApiCrudServiceRestApiDataSenderImpl | getAllDataList | json: ${json.toString()}',
+      );
 
       if (json != null) {
         final ResponseModel responseModel =
@@ -111,16 +118,18 @@ class RestApiCrudServiceRestApiDataSenderImpl extends IRestApiCrudService {
       return null;
     } catch (e) {
       debugPrint(
-          'RestApiCrudServiceRestApiDataSenderImpl | getAllDataList | error: $e');
+        'RestApiCrudServiceRestApiDataSenderImpl | getAllDataList | error: $e',
+      );
       rethrow;
     }
   }
 
   @override
-  Future<Map<String, dynamic>?> getData(
-      {Map<String, dynamic>? data,
-      String? accessToken,
-      required String endPoint}) async {
+  Future<Map<String, dynamic>?> getData({
+    Map<String, dynamic>? data,
+    String? accessToken,
+    required String endPoint,
+  }) async {
     try {
       return await iRestApiDataSender.sendRequest(
         data: data,
@@ -143,7 +152,8 @@ class RestApiCrudServiceRestApiDataSenderImpl extends IRestApiCrudService {
       // return null;
     } catch (e) {
       debugPrint(
-          'RestApiCrudServiceRestApiDataSenderImpl | getData | error: $e');
+        'RestApiCrudServiceRestApiDataSenderImpl | getData | error: $e',
+      );
       rethrow;
     }
   }

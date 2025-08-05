@@ -18,17 +18,13 @@ class MapResponseModel extends MapResponseEntity {
   @override
   final Map<String, dynamic>? data;
 
-  MapResponseModel({
-    this.status,
-    this.message,
-    this.statusCode,
-    this.data,
-  }) : super(
-          status: status,
-          message: message,
-          statusCode: statusCode,
-          data: data,
-        );
+  MapResponseModel({this.status, this.message, this.statusCode, this.data})
+    : super(
+        status: status,
+        message: message,
+        statusCode: statusCode,
+        data: data,
+      );
 
   factory MapResponseModel.fromJson(Map<String, dynamic> json) =>
       _$MapResponseModelFromJson(json);

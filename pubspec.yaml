@@ -7,7 +7,7 @@ issue_tracker: https://github.com/GenieCoderSrc/rest_api_impl/issues
 
 
 environment:
-  sdk: ^1.4.0
+  sdk: ^3.8.1
   flutter: ">=1.17.0"
 
 dependencies:

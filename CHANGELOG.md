@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.7
+
+### Aug 22, 2025
+
+### Updated
+- Updated `local_data_impl` to 0.0.4
+- Updated `get_it_di_global_variable` to 0.0.6
+- Updated Dart sdk to 3.9.0
+- Remove un-used dependency
+- Removed `flutter_lints` Dependency
+
 ## 0.0.6
 ### Jul 29, 2025
 

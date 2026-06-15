@@ -18,7 +18,7 @@ dependencies:
 
 
   local_data_impl: ^0.0.4
-  get_it_di_global_variable: ^0.0.6
+  get_it_di_global_variable: ^0.0.7
 
 
   dio: ^5.9.2

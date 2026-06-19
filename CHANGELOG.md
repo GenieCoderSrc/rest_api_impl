@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.9
+
+### Jun 20, 2026
+
+### ✨ Updated
+
+- Updated `get_it_di_global_variable` to ^0.0.8
+- Updated `local_data_impl` to ^0.0.5
+
 ## 0.0.8
 
 ### Jun 15, 2026
@@ -9,7 +18,6 @@ All notable changes to this project will be documented in this file.
 ### ✨ Updated
 
 - Updated `get_it_di_global_variable` to ^0.0.7
-
 
 ## 0.0.7
 

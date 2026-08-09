@@ -1,6 +1,6 @@
 name: rest_api_impl
 description: "A Dart package providing a robust REST API IMPL service implementation with HTTP request handling, CRUD operations, and file management."
-version: 0.0.9
+version: 0.0.9+1
 homepage: https://github.com/GenieCoderSrc/rest_api_impl
 repository: https://github.com/GenieCoderSrc/rest_api_impl
 issue_tracker: https://github.com/GenieCoderSrc/rest_api_impl/issues
@@ -17,15 +17,15 @@ dependencies:
     sdk: flutter
 
 
-  local_data_impl: ^0.0.5
+  local_data_impl: ^0.0.6
   get_it_di_global_variable: ^0.0.8
 
 
-  dio: ^5.9.2
+  dio: ^5.11.0
   http: ^1.6.0
   json_annotation: ^4.12.0
   shared_preferences: ^2.5.5
-  cross_file: ^0.3.5+2
+  cross_file: ^0.3.5+4
 
 dev_dependencies:
   flutter_test:

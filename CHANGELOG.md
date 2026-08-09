@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.9+1
+
+### Aug 10, 2026
+
+### ✨ Updated
+
+- Updated `local_data_impl` to ^0.0.6
+
 ## 0.0.9
 
 ### Jun 20, 2026

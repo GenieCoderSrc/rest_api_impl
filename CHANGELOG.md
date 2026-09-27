@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.1.0
+
+### Sep 26, 2026
+
+### ✨ Updated
+
+- Updated `dio ^5.11.1`
+- Updated `cross_file ^0.4.0`
+
 ## 0.0.9+1
 
 ### Aug 10, 2026

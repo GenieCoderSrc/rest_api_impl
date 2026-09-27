@@ -4,7 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## 0.1.0
 
-### Sep 26, 2026
+### Sep 27, 2026
+
+### 🐛 Fixed
+
+- Fixed `XFile` path access in `ImageServiceRestApiDataSourceHttpImpl` to support newer `cross_file` package changes.
 
 ### ✨ Updated
 

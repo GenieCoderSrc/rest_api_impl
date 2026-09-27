@@ -26,7 +26,7 @@ void main() async {
   print('User Data: $userData');
 
   final file = File('path/to/image.png');
-  final xFile = XFile(file.path);
+  final xFile = XFile.fileSystem(path: file.path);
   final uploadResponse = await imageService.uploadFile(
     file: xFile,
     endPoint: 'upload/image',

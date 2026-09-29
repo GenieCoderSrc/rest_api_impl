@@ -85,13 +85,15 @@ class ImageServiceRestApiDataSourceHttpImpl
 
       // Attach the image file to the request
       final http.ByteStream fileStream = http.ByteStream(file.openRead());
-      final int length = await file.length();
+      final int length = await file.length() ?? 0;
 
       final http.MultipartFile multipartFile = http.MultipartFile(
         imgFieldName,
         fileStream,
         length,
-        filename: fileName ?? file.path,
+        filename:
+            fileName ??
+            (file is FileSystemXFile ? (file).path : Uri.parse(file.uri).path),
       );
       request.files.add(multipartFile);
 

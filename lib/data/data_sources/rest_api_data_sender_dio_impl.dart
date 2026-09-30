@@ -43,35 +43,35 @@ class RestApiDataSenderDioImpl extends IRestApiDataSender {
       late Response response;
 
       switch (method) {
-        case Method.GET:
+        case Method.get:
           response = await dio.get(
             url,
             queryParameters: data,
             options: Options(headers: headers),
           );
           break;
-        case Method.POST:
+        case Method.post:
           response = await dio.post(
             url,
             data: data,
             options: Options(headers: headers),
           );
           break;
-        case Method.PATCH:
+        case Method.patch:
           response = await dio.patch(
             url,
             data: data,
             options: Options(headers: headers),
           );
           break;
-        case Method.PUT:
+        case Method.put:
           response = await dio.put(
             url,
             data: data,
             options: Options(headers: headers),
           );
           break;
-        case Method.DELETE:
+        case Method.delete:
           response = await dio.delete(
             url,
             data: data,

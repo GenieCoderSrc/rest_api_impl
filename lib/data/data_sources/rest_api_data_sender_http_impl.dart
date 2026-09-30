@@ -40,7 +40,7 @@ class RestApiDataSenderHttpImpl extends IRestApiDataSender {
         config: iRestApiConfig,
       );
 
-      final Request request = Request(method.name, url);
+      final Request request = Request(method.name.toUpperCase(), url);
 
       // get headers
       Map<String, String> headers = iRestApiHeaderProvider.getHeaders(

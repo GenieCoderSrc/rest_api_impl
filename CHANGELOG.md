@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## 0.1.0
 
-### Sep 27, 2026
+### Sep 30, 2026
 
 ### 🐛 Fixed
 

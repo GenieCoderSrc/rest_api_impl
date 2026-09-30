@@ -92,7 +92,9 @@ class ImageServiceRestApiDataSourceHttpImpl
         fileStream,
         length,
         filename: fileName ??
-            (file.path.toLowerCase().startsWith('blob:') ? file.name : file.path),
+            (file.path.toLowerCase().startsWith('blob:')
+                ? file.name
+                : file.path),
       );
       request.files.add(multipartFile);
 

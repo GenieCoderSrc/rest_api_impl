@@ -24,12 +24,12 @@ class ResponseModel<T> extends ResponseEntity<T> {
   final T? data;
 
   ResponseModel({this.message, this.status, this.statusCode, this.data})
-    : super(
-        message: message,
-        status: status,
-        statusCode: statusCode,
-        data: data,
-      );
+      : super(
+          message: message,
+          status: status,
+          statusCode: statusCode,
+          data: data,
+        );
 
   factory ResponseModel.fromJson(Map<String, dynamic> json) =>
       _$ResponseModelFromJson(json);

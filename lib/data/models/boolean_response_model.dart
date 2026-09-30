@@ -20,12 +20,12 @@ class BooleanResponseModel extends BooleanResponseEntity {
   final bool? data;
 
   BooleanResponseModel({this.status, this.message, this.statusCode, this.data})
-    : super(
-        status: status,
-        message: message,
-        statusCode: statusCode,
-        data: data,
-      );
+      : super(
+          status: status,
+          message: message,
+          statusCode: statusCode,
+          data: data,
+        );
 
   factory BooleanResponseModel.fromJson(Map<String, dynamic> json) =>
       _$BooleanResponseModelFromJson(json);

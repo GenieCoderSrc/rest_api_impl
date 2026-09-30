@@ -8,12 +8,13 @@ part of 'boolean_response_model.dart';
 
 BooleanResponseModel _$BooleanResponseModelFromJson(
   Map<String, dynamic> json,
-) => BooleanResponseModel(
-  status: json['status'] as bool? ?? false,
-  message: json['message'] as String?,
-  statusCode: json['statusCode'] as int? ?? 0,
-  data: json['data'] as bool? ?? false,
-);
+) =>
+    BooleanResponseModel(
+      status: json['status'] as bool? ?? false,
+      message: json['message'] as String?,
+      statusCode: json['statusCode'] as int? ?? 0,
+      data: json['data'] as bool? ?? false,
+    );
 
 Map<String, dynamic> _$BooleanResponseModelToJson(
   BooleanResponseModel instance,

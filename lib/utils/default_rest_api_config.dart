@@ -5,8 +5,8 @@ class DefaultRestApiConfig extends IRestApiConfig {
   String? _apiKey;
 
   DefaultRestApiConfig({String? baseUrl, String? apiKey})
-    : _baseUrl = baseUrl,
-      _apiKey = apiKey;
+      : _baseUrl = baseUrl,
+        _apiKey = apiKey;
 
   @override
   String get apiKey => _apiKey ?? '';

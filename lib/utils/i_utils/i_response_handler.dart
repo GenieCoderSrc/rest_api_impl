@@ -1,3 +1,3 @@
 abstract class IResponseHandler<TResponse> {
-  Map<String, dynamic>? handleResponse(response);
+  Map<String, dynamic>? handleResponse(dynamic response);
 }

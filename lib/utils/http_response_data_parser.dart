@@ -7,7 +7,7 @@ class HttpResponseDataParser {
     }
   }
 
-  static T? dataFromJson<T>(json) {
+  static T? dataFromJson<T>(dynamic json) {
     if (T == bool) {
       return json as T?;
     } else {

@@ -1,1 +1,1 @@
-enum Method { POST, GET, PUT, DELETE, PATCH }
+enum Method { post, get, put, delete, patch }

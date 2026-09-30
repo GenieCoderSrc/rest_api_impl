@@ -21,7 +21,7 @@ class RestApiCrudServiceRestApiDataSenderImpl extends IRestApiCrudService {
       return await iRestApiDataSender.sendRequest(
         data: data,
         endPoint: endPoint,
-        method: Method.POST,
+        method: Method.post,
         accessToken: accessToken,
       );
     } catch (e) {
@@ -42,7 +42,7 @@ class RestApiCrudServiceRestApiDataSenderImpl extends IRestApiCrudService {
       return await iRestApiDataSender.sendRequest(
         data: data,
         endPoint: endPoint,
-        method: Method.PATCH,
+        method: Method.patch,
         accessToken: accessToken,
       );
 
@@ -70,7 +70,7 @@ class RestApiCrudServiceRestApiDataSenderImpl extends IRestApiCrudService {
       return await iRestApiDataSender.sendRequest(
         data: data,
         endPoint: endPoint,
-        method: Method.DELETE,
+        method: Method.delete,
         accessToken: accessToken,
       );
 
@@ -98,7 +98,7 @@ class RestApiCrudServiceRestApiDataSenderImpl extends IRestApiCrudService {
       Map<String, dynamic>? json = await iRestApiDataSender.sendRequest(
         data: data,
         endPoint: endPoint,
-        method: Method.GET,
+        method: Method.get,
         accessToken: accessToken,
       );
 
@@ -134,7 +134,7 @@ class RestApiCrudServiceRestApiDataSenderImpl extends IRestApiCrudService {
       return await iRestApiDataSender.sendRequest(
         data: data,
         endPoint: endPoint,
-        method: Method.GET,
+        method: Method.get,
         accessToken: accessToken,
       );
 

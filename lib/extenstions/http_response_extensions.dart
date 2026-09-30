@@ -16,7 +16,7 @@ extension HttpResponseExtensions on http.Response {
     return statusCode >= 500 && statusCode < 600;
   }
 
-  handleResponse<R>({R Function()? onSuccess}) {
+  dynamic handleResponse<R>({R Function()? onSuccess}) {
     if (isSuccess()) {
       if (onSuccess != null) {
         return onSuccess();
